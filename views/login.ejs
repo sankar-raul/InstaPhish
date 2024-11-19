@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <link rel="stylesheet" href="/css/login.css">
+    <script type="module" defer src="/js/login.js"></script>
+</head>
+<body>
+    <p class="language">English</p>
+    <div class="main-container">
+        <div class="container">
+        <div class="icon"></div>
+        <form id="loginForm" autocomplete="off">
+            <div class="input">
+                <input autofocus id="userId" type="text" required />
+                <label for="userId">Phone number, username, or email</label>
+
+            </div>
+            <div class="input">
+                <input id="password" type="password" required />
+                <label for="password">Password</label>
+            </div>
+            <p class="forgot">Forgot password?</p>
+            <input type="submit" class="login-btn" value="Log in"/>
+        </form>
+        <div class="sign-up">
+            <p>Don't have an account?</p>
+            <a class="link" href="#">Sign up</a>
+        </div>
+        <siv class="policy">
+            By continuing, you agree to Instagram's <span class="high">Terms of Use</span> and <span class="high">Privacy Policy</span>
+        </siv>
+    </div>
+    </div>
+    <div class="footer-containter"></div>
+</body>
+</html>

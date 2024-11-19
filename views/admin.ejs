@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/table.css">
+    <script defer src="/js/table.js"></script>
+</head>
+<body>
+    <nav class="nav"></nav>
+    <div class="info">
+        <% if (result[0]) { %>
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <% Object.keys(result[0]).forEach(header => {%>
+                        <th><%= header %></th>
+                    <% }) %>
+                </tr>
+            </thead>
+            <tbody>
+                <% result.forEach((data, index) => { %>
+                    <tr>
+                        <td><%= index %></td>
+                        <% Object.keys(data).forEach(item => {%>
+                            <th><%= data[item] %></th>
+                        <% }) %>
+                    </tr>
+                <% }) %>
+            </tbody>
+            </table>
+            <% }  else {%>
+                <div class="empty" style="display: flex; justify-content: center; margin-top: 50px; ">
+                    <p style="background: #0a01; border: 1px solid #0a05; width: clamp(30px, 90%, 450px); height: 150px; border-radius: 10px; display: grid; place-items: center;">
+                        No items
+                        
+                    </p>
+                </div>
+                <% } %>
+    </div>
+</body>
+</html>
